@@ -1,16 +1,131 @@
-# React + Vite
+# 💰 Finance Dashboard UI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![React](https://img.shields.io/badge/React-18-blue?logo=react)
+![Vite](https://img.shields.io/badge/Vite-Frontend-purple?logo=vite)
+![Tailwind](https://img.shields.io/badge/TailwindCSS-Styling-38B2AC?logo=tailwindcss)
+![License](https://img.shields.io/badge/License-MIT-green)
 
-Currently, two official plugins are available:
+A modern, clean, and responsive **Finance Dashboard UI** built with **React + Tailwind CSS**.
+This project focuses on **UI/UX design, component structure, and data visualization**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* 📊 **Dashboard Overview**
 
-## Expanding the ESLint configuration
+  * Total Balance
+  * Monthly Income & Expenses
+* 📈 **Statistics Chart**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+  * Interactive line chart (income vs expenses)
+* 🥧 **Expense Breakdown**
+
+  * Custom SVG radial chart (pixel-perfect)
+* 🧾 **Category Insights**
+
+  * Percentage-based spending distribution
+* 🎨 **Modern UI**
+
+  * Clean layout, soft shadows, rounded cards
+* 📱 **Responsive Design**
+
+  * Works across mobile, tablet, and desktop
+* 🔄 **Dynamic Filtering**
+
+  * Daily / Weekly / Monthly toggle
+
+---
+
+## 🛠 Tech Stack
+
+* ⚛️ React (Vite)
+* 🎨 Tailwind CSS
+* 📊 Recharts (line charts)
+* 🧩 Custom SVG (radial chart)
+* 🎯 Lucide Icons
+
+---
+
+## 📸 Preview
+
+> Add screenshots here after uploading images
+
+```md
+![Dashboard](./screenshots/dashboard.png)
+![Charts](./screenshots/charts.png)
+```
+
+---
+
+## 📦 Installation
+
+Clone the repository:
+
+bash
+git clone https://github.com/YOUR_USERNAME/finance-dashboard.git
+cd finance-dashboard
+
+
+Install dependencies:
+
+bash
+npm install
+
+
+Run the development server:
+
+bash
+npm run dev
+
+
+---
+
+## 📁 Project Structure
+
+
+src/
+ ├── components/
+ │   ├── cards/
+ │   ├── charts/
+ │   ├── Navbar.jsx
+ │
+ ├── pages/
+ │   ├── Dashboard.jsx
+ │
+ ├── data/
+ ├── utils/
+
+
+---
+
+## 🎯 Key Highlights
+
+* Built a **pixel-perfect UI** from design reference
+* Implemented **custom SVG charts** instead of relying only on libraries
+* Designed a **scalable component-based architecture**
+* Focused on **clean code and maintainability**
+
+---
+
+## 🚀 Future Improvements
+
+* 📋 Transactions table with filters & search
+* 🌙 Dark mode support
+* 💾 Local storage / API integration
+* 📤 Export data (CSV/JSON)
+
+---
+
+## 👨‍💻 Author
+
+**Sahil Gupta**
+
+* GitHub: https://github.com/sahilgupta-in
+* LinkedIn: (Add your profile)
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
