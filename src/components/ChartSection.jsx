@@ -68,7 +68,7 @@ export default function ChartSection() {
         </div>
 
         {/* FILTER */}
-        <div className="flex justify-center items-center gap-2 text-sm font-semibold text-gray-900 dark:text-gray-100 border border-gray-200 dark:border-gray-700 shadow-[0_1px_2px_rgba(0,0,0,0.04)] px-3 py-1 rounded-lg">
+        <div className="flex justify-center items-center gap-2 text-sm font-medium text-gray-900 dark:text-gray-100 border border-gray-200 dark:border-gray-700 shadow-[0_1px_2px_rgba(0,0,0,0.04)] px-3 py-1 rounded-lg">
           <CalendarCheck2 size={20} />
           Monthly
         </div>
