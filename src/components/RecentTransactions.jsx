@@ -1,4 +1,3 @@
-
 const mockTransactions = [
   { id: 1, date: "2024-07-01", amount: 200, category: "Food", type: "expense" },
   {
@@ -10,7 +9,7 @@ const mockTransactions = [
   },
 ];
 
-export default function RecentTransactions() {
+export default function RecentTransactions({ onSeeAll }) {
   const recent = [...mockTransactions]
     .sort((a, b) => new Date(b.date) - new Date(a.date))
     .slice(0, 4);
@@ -23,7 +22,10 @@ export default function RecentTransactions() {
           Recent Transactions
         </h3>
 
-        <button className="text-sm text-[#299D91] cursor-pointer">
+        <button
+          className="text-sm text-[#299D91] cursor-pointer"
+          onClick={onSeeAll}
+        >
           See all
         </button>
       </div>
@@ -34,7 +36,9 @@ export default function RecentTransactions() {
           <div key={t.id} className="flex items-center justify-between">
             {/* LEFT */}
             <div>
-              <p className="text-sm font-medium text-gray-700 dark:text-gray-200">{t.category}</p>
+              <p className="text-sm font-medium text-gray-700 dark:text-gray-200">
+                {t.category}
+              </p>
               <p className="text-xs text-gray-400 dark:text-gray-500">
                 {new Date(t.date).toLocaleDateString()}
               </p>
@@ -50,7 +54,9 @@ export default function RecentTransactions() {
                 {t.type === "income" ? "+" : "-"}${t.amount}
               </p>
 
-              <p className="text-xs text-gray-400 dark:text-gray-500 capitalize">{t.type}</p>
+              <p className="text-xs text-gray-400 dark:text-gray-500 capitalize">
+                {t.type}
+              </p>
             </div>
           </div>
         ))}

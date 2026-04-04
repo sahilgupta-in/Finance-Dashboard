@@ -1,4 +1,3 @@
-
 import { LineChart, Line, XAxis, Tooltip, ResponsiveContainer } from "recharts";
 import { CalendarCheck2 } from "lucide-react";
 import { useStore } from "../store/useStore";
@@ -47,7 +46,7 @@ export default function ChartSection() {
     );
   }, [transactions]);
   return (
-    <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 shadow-[0_1px_2px_rgba(0,0,0,0.04)] rounded-2xl p-5">
+    <div className="bg-white dark:bg-gray-900 border  border-gray-200 dark:border-gray-800 shadow-[0_1px_2px_rgba(0,0,0,0.04)] rounded-2xl p-5">
       {/* HEADER */}
       <div className="flex justify-between items-center mb-4">
         <div>
@@ -124,7 +123,7 @@ export default function ChartSection() {
       </div>
 
       {/* BOTTOM STATS */}
-      <div className="grid grid-cols-2 gap-5 mt-6 pt-4 border-t border-gray-200 dark:border-gray-800 shadow-[0_1px_2px_rgba(0,0,0,0.04)]">
+      <div className="grid grid-cols-2 gap-5 mt-6  pt-4 border-t border-gray-200 dark:border-gray-800 shadow-[0_1px_2px_rgba(0,0,0,0.04)]">
         <div>
           <p className="text-sm text-gray-500 dark:text-gray-400">
             Average income

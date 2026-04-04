@@ -8,8 +8,9 @@ import StatCard from "../components/StatCard";
 import PromoCard from "../components/PromoCard";
 import TransactionsSection from "../components/TransactionsSection";
 import RecentTransactions from "../components/RecentTransactions";
+import AccountSection from "../components/AccountSection";
 
-const TABS = ["Overview", "Transaction"];
+const TABS = ["Overview", "Transaction", "Accounts"];
 
 export default function Dashboard() {
   const [activeTab, setActiveTab] = useState("Overview");
@@ -83,11 +84,14 @@ export default function Dashboard() {
               <div className=" flex flex-col gap-5 lg:col-span-2">
                 <ChartSection />
 
-                <RecentTransactions />
+                <RecentTransactions
+                  onSeeAll={() => setActiveTab("Transaction")}
+                />
               </div>
 
               <aside className="flex flex-col gap-5">
                 <ExpenseCard />
+
                 <PromoCard />
               </aside>
             </section>
@@ -96,6 +100,9 @@ export default function Dashboard() {
 
         {/* ✅ TRANSACTION TAB */}
         {activeTab === "Transaction" && <TransactionsSection />}
+
+        {/* ✅ ACCOUNTS TAB */}
+        {activeTab === "Accounts" && <AccountSection />}
       </main>
     </div>
   );

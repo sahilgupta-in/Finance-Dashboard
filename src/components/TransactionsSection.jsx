@@ -33,7 +33,7 @@ export default function TransactionsSection() {
     }
 
     return data;
-  }, [search, typeFilter, sort]);
+  }, [search, typeFilter, sort, transactions]);
 
   const handleExportCSV = () => {
     if (!transactions.length) return;
@@ -70,7 +70,7 @@ export default function TransactionsSection() {
   return (
     <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm p-4 sm:p-6">
       {/* HEADER */}
-      <div className="flex flex-col gap-4 mb-6">
+      <div className="flex w-full flex-col gap-4 mb-6">
         {/* TOP ROW */}
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
           <div>
@@ -127,7 +127,7 @@ export default function TransactionsSection() {
             <div className="relative w-full  sm:w-auto">
               <Funnel
                 size={18}
-                className="absolute left-3 top-1/2 -translate-y-1/2   text-gray-500 dark:text-gray-400"
+                className="absolute left-3 top-1/2 -translate-y-1/2   text-gray-500 dark:text-gray-200"
               />
 
               <select

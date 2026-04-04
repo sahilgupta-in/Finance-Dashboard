@@ -15,7 +15,6 @@ export default function ExpenseCard() {
 
   return (
     <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 shadow-sm rounded-2xl p-5 w-full">
-
       {/* HEADER */}
       <h3 className="font-semibold mb-4 text-gray-900 dark:text-white">
         All expenses
@@ -44,26 +43,40 @@ export default function ExpenseCard() {
 
         {/* CENTER INFO */}
         <div className="absolute top-[45%] text-center">
-          <p className="text-xs text-gray-500 dark:text-gray-400">
-            Total
-          </p>
+          <p className="text-xs text-gray-500 dark:text-gray-400">Total</p>
           <p className="font-bold text-gray-900 dark:text-white">
-            ₹{total.toLocaleString()}
+            ${total.toLocaleString()}
           </p>
         </div>
       </div>
 
       {/* LEGEND */}
       <div className="mt-4 space-y-2 text-sm">
-        {grouped.map((item) => (
-          <div
-            key={item.name}
-            className="flex justify-between text-gray-700 dark:text-gray-300"
-          >
-            <span>{item.name}</span>
-            <span className="font-medium">{item.percent}%</span>
-          </div>
-        ))}
+        {grouped.map((item) => {
+          const dotColor =
+            {
+              Entertainment: "#16a34a",
+              Platform: "#ef4444",
+              Shopping: "#f97316",
+              "Food & health": "#1F7F75",
+            }[item.name] || "#94a3b8";
+
+          return (
+            <div
+              key={item.name}
+              className="flex justify-between items-center text-gray-700 dark:text-gray-300"
+            >
+              <div className="flex items-center gap-2">
+                <span
+                  className="w-2 h-2 rounded-full"
+                  style={{ backgroundColor: dotColor }}
+                />
+                <span>{item.name}</span>
+              </div>
+              <span className="font-medium">{item.percent}%</span>
+            </div>
+          );
+        })}
       </div>
     </div>
   );

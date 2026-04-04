@@ -4,7 +4,7 @@ const COLORS = {
   Entertainment: "#16a34a",
   Platform: "#ef4444",
   Shopping: "#f97316",
-  "Food & health": "#06b6d4",
+  "Food & health": "#1F7F75",
 };
 
 export default function RadialChart({ data }) {
@@ -39,7 +39,7 @@ export default function RadialChart({ data }) {
             }}
             onMouseEnter={() => setHovered(item.name)}
             onMouseLeave={() => setHovered(null)}
-            transform="rotate(-90 100 100)"
+            transform="rotate(90 100 100)"
           />
         );
       })}

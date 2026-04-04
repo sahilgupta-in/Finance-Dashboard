@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Search, Bell, Moon, Sun } from "lucide-react";
 import RoleSwitcher from "./RoleSwitcher";
+import logo from "../assets/logo.svg";
 
 export default function Navbar() {
   const [theme, setTheme] = useState("light");
@@ -28,14 +29,18 @@ export default function Navbar() {
       {/* LEFT SECTION */}
       <div className="flex items-center gap-4">
         {/* Logo */}
-        <div className="w-8 h-8 bg-[#299D91] rounded-full flex items-center justify-center">
-          <span className="text-white font-bold text-sm">✿</span>
+        <div className="w-8 h-8 bg-teal-50 rounded-full flex items-center justify-center">
+          <span className="text-white font-bold text-sm">
+            <img src={logo} alt="logo" />
+          </span>
         </div>
 
         {/* Breadcrumb */}
-        <div className="hidden md:flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
+        <div className="hidden md:flex items-center gap-2 text-sm font-semibold text-gray-600 dark:text-gray-400">
+          Zorvyn Fintech
+          <span className="text-gray-400">›</span>
           <span className="bg-green-50 dark:bg-green-900/30 text-[#299D91] px-3 py-1 rounded-lg font-medium">
-            Finance Dashboard
+            Dashboard
           </span>
         </div>
       </div>
@@ -62,7 +67,7 @@ export default function Navbar() {
         </button>
 
         {/* Icons */}
-        <div className="hidden sm:flex items-center gap-3 text-gray-600 dark:text-gray-400">
+        <div className="hidden sm:flex items-center gap-3 text-gray-600 dark:text-gray-300">
           <Bell size={20} />
         </div>
 
