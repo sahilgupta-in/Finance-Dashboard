@@ -37,7 +37,7 @@ export default function Navbar() {
 
         {/* Breadcrumb */}
         <div className="hidden md:flex items-center gap-2 text-sm font-semibold text-gray-600 dark:text-gray-400">
-          Zorvyn Fintech
+          SpendWise
           <span className="text-gray-400">›</span>
           <span className="bg-green-50 dark:bg-green-900/30 text-[#299D91] px-3 py-1 rounded-lg font-medium">
             Dashboard
